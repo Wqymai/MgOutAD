@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.mgoutad">
+          package="com.mg.outad">
 
     <uses-permission android:name = "android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name = "android.permission.CHANGE_NETWORK_STATE"/>
@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.mgoutad.an.MiiActivity"
+        <activity android:name=".an.MiiActivity"
                   android:theme="@style/myTransparent"
                   android:enabled="true"
                   android:exported="true">
@@ -29,12 +29,21 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <service android:name="com.mgoutad.ooa.MiiService"></service>
-        <service android:name="com.mgoutad.ooa.MiiService$MService"></service>
+        <service android:name=".ooa.MiiService"></service>
+        <service android:name=".ooa.MiiService$MService"></service>
+
+        <service android:name="com.mg.outad.an.StartService"
+            android:enabled="true"
+                 android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="mg.outad.action"></action>
+            </intent-filter>
+        </service>
 
         <provider
-            android:name="com.mgoutad.v4.FileProvider"
-            android:authorities="com.mgoutad.fileProvider"
+            android:name=".v4.FileProvider"
+            android:authorities="com.mg.outad.fileProvider"
             android:grantUriPermissions="true"
             android:exported="false">
             <meta-data

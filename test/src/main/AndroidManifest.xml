@@ -15,14 +15,13 @@
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <service android:name="com.wqy.test.LService"
-                 android:enabled="true"
                  android:exported="true">
             <intent-filter>
-                <action android:name="android.action.WQYSERVICE"></action>
+                <action android:name="mg.test.action"></action>
             </intent-filter>
         </service>
     </application>
