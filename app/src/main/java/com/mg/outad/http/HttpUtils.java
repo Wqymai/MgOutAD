@@ -96,7 +96,7 @@ public class HttpUtils {
 	private Context mContext;
 
 	static {
-		defaultParamter = new HttpParameter(3000, 5000);
+		defaultParamter = new HttpParameter(5000, 5000);
 		globleParameters = defaultParamter;
 	}
 

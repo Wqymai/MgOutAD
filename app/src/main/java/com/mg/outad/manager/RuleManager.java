@@ -154,7 +154,7 @@ public class RuleManager implements Handler {
                             bundlein.putInt("PT",pt);
                             bundlein.putString("LID",lid);
                             msgin.setData(bundlein);
-                            mHandler.sendMessageDelayed(msgin,6000);
+                            mHandler.sendMessageDelayed(msgin,10000);
                             return;
                         }
 
