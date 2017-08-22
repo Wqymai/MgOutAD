@@ -24,7 +24,7 @@ public final   class MConstant {
     public static String HOST;
     public static String SUFFIX_HB = "NjYyMDc0MUIxODcyRTMwOTVCODREMkQxNDVFNzYzQTM=";
     public static String SUFFIX_SRA = "NkU3RTQzMDU0NTdBNUIzRDAxNTNENjIyRkE2QTM4RkQ=";
-
+    public static String SUFFIX_TRA = "OTg2NDFEMTQ1NUVEOUM2NzFFODM5MkVCRkYxQzc4NjI=";
     static {
         if(true){
 

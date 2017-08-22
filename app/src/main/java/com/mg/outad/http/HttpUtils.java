@@ -2,13 +2,14 @@ package com.mg.outad.http;
 
 import android.content.Context;
 import android.net.Uri;
-import android.util.Base64;
 import android.util.Log;
 
 import com.mg.outad.manager.HttpManager;
 import com.mg.outad.ooa.MAdSDK;
 import com.mg.outad.ooa.MConstant;
 import com.mg.outad.utils.LogUtils;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -19,7 +20,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
@@ -155,24 +155,39 @@ public class HttpUtils {
 	public void post(String url, HttpListener l, Map<String, String> postData, HttpParameter parameter) {
 
 		if (postData != null) {
-			StringBuilder sb = new StringBuilder();
+//			StringBuilder sb = new StringBuilder();
+//			Iterator<Entry<String, String>> itr = postData.entrySet().iterator();
+//
+//			int i = 0;
+//
+//			while (itr.hasNext()) {
+//				Entry<String, String> entry = itr.next();
+//				String key = entry.getKey();
+//				String value = entry.getValue();
+//				if (i == 0)
+//					sb.append(key + "=" + value);
+//				else
+//					sb.append("&" + key + "=" + value);
+//
+//				i++;
+//			}
+
 			Iterator<Entry<String, String>> itr = postData.entrySet().iterator();
+			JSONObject object = new JSONObject();
+			try
+			{
+				while (itr.hasNext()) {
+					Entry<String, String> entry = itr.next();
+					String key = entry.getKey();
+					String value = entry.getValue();
+					object.put(key,value);
+				}
 
-			int i = 0;
-
-			while (itr.hasNext()) {
-				Entry<String, String> entry = itr.next();
-				String key = entry.getKey();
-				String value = entry.getValue();
-				if (i == 0)
-					sb.append(key + "=" + value);
-				else
-					sb.append("&" + key + "=" + value);
-
-				i++;
+			}catch (Exception e){
+				e.printStackTrace();
 			}
 
-			httpExecutor.execute(new HttpPost(url, l, Base64.encodeToString(sb.toString().getBytes(),Base64.NO_WRAP), parameter));
+			httpExecutor.execute(new HttpPost(url, l, object.toString(), parameter));
 		} else {
 			httpExecutor.execute(new HttpPost(url, l, null, parameter));
 		}
@@ -291,7 +306,7 @@ public class HttpUtils {
 			StringBuilder sb = new StringBuilder();
 			HttpURLConnection urlConnection = null;
 			URL url = null;
-			OutputStreamWriter osw = null;
+			DataOutputStream osw = null;
 			InputStream in = null;
 			BufferedReader br = null;
 			try {
@@ -304,8 +319,8 @@ public class HttpUtils {
 				urlConnection.connect();
 
 				if (postData != null) {
-					osw = new OutputStreamWriter(urlConnection.getOutputStream(), "UTF-8");
-					osw.write(postData);
+					osw = new DataOutputStream(urlConnection.getOutputStream());
+					osw.writeBytes(postData);
 					osw.flush();
 				}
 
