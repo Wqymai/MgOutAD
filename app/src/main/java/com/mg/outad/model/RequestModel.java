@@ -418,7 +418,7 @@ public class RequestModel {
         Map<String,String> params = new HashMap<>();
         try {
             long currTime = System.currentTimeMillis();
-            params.put("action","sra");
+            params.put("action","tra");
             params.put("appid", appid);
             params.put("ver", MConstant.MSDK_VERSION);
             params.put("tp", String.valueOf(currTime));
@@ -456,7 +456,7 @@ public class RequestModel {
             params.put("bssid",deviceInfo.getBssid());
             params.put("brk",String.valueOf(isRootSystem()));
             params.put("dl","1");
-            params.put("sign",CommonUtils.hashSign("sra"+appid+ MConstant.MSDK_VERSION
+            params.put("sign",CommonUtils.hashSign("tra"+appid+ MConstant.MSDK_VERSION
                     + currTime+"1"+deviceInfo.getImei() + deviceInfo.getScreenWidth() + deviceInfo.getScreenHeight()));
             params.put("lid",lid);
             params.put("orientation",String.valueOf(getOri(mContext)));

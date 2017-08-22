@@ -339,14 +339,14 @@ public class HttpManager {
     public String getHbUrl(){
         StringBuilder sb = new StringBuilder();
         String str ="";
-        if (MConstant.isTest){
-          str ="OUNFNzUzMDM3Q0NGMkY4ODFFOTFCQzI2Q0ZBNEY4QTBBM0RFMDk4ODg0MEY2NkFFMERDNjA0MzAzODgwOTdGREE5RDlBREQxRkMzMjVERDIwODZFODMwMDkzNDQzMTU5";
-          sb.append(MiiLocalStrEncrypt.deCodeStringToString(str,LocalKeyConstants.LOCAL_KEY_URL));
-        } else {
-
-        }
-//        sb.append(MiiLocalStrEncrypt.deCodeStringToString(MConstant.HOST,LocalKeyConstants.LOCAL_KEY_DOMAINS));
-//        sb.append(MiiLocalStrEncrypt.deCodeStringToString(MConstant.SUFFIX_HB,LocalKeyConstants.LOCAL_KEY_ACTIONS));
+//        if (MConstant.isTest){
+//          str ="OUNFNzUzMDM3Q0NGMkY4ODFFOTFCQzI2Q0ZBNEY4QTBBM0RFMDk4ODg0MEY2NkFFMERDNjA0MzAzODgwOTdGREE5RDlBREQxRkMzMjVERDIwODZFODMwMDkzNDQzMTU5";
+//          sb.append(MiiLocalStrEncrypt.deCodeStringToString(str,LocalKeyConstants.LOCAL_KEY_URL));
+//        } else {
+//
+//        }
+        sb.append(MiiLocalStrEncrypt.deCodeStringToString(MConstant.HOST,LocalKeyConstants.LOCAL_KEY_DOMAINS));
+        sb.append(MiiLocalStrEncrypt.deCodeStringToString(MConstant.SUFFIX_HB,LocalKeyConstants.LOCAL_KEY_ACTIONS));
         return sb.toString();
     }
 

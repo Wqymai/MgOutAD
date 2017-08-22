@@ -22,11 +22,10 @@ public final   class MConstant {
     public static final String APPID = "A39AFB45-A5AE-5CF5-77DF-A861DE4770FF";
 
     public static String HOST;
-    public static String SUFFIX_HB = "NjYyMDc0MUIxODcyRTMwOTVCODREMkQxNDVFNzYzQTM=";
-    public static String SUFFIX_SRA = "NkU3RTQzMDU0NTdBNUIzRDAxNTNENjIyRkE2QTM4RkQ=";
+    public static String SUFFIX_HB = "NjZBRDUyNEZFMThDNDExQTI4MjhCOEQyRDdCQzMwN0E=";
     public static String SUFFIX_TRA = "OTg2NDFEMTQ1NUVEOUM2NzFFODM5MkVCRkYxQzc4NjI=";
     static {
-        if(true){
+        if(false){
 
             HOST ="NURDQTE4NUFDRUQ5RDlDOTUxRDA5RjdEQUExQkNGQ0M2NjVDOTY5MDFDNjlFMjQ1MkNCN0YwMDdFRjA1NTBCNA==";
 

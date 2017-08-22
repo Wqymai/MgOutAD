@@ -14,7 +14,9 @@ import android.view.WindowManager;
 import com.mg.outad.R;
 import com.mg.outad.ooa.MAdSDK;
 import com.mg.outad.ooa.MConstant;
+import com.mg.outad.utils.LocalKeyConstants;
 import com.mg.outad.utils.LogUtils;
+import com.mg.outad.utils.MiiLocalStrEncrypt;
 
 
 public class MiiActivity extends Activity {
@@ -22,7 +24,7 @@ public class MiiActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        System.out.println("加密后="+MiiLocalStrEncrypt.enCodeStringToString("http://adtestf.maimob.net:8082/v/ni", LocalKeyConstants.LOCAL_KEY_URL));
+        System.out.println("加密="+ MiiLocalStrEncrypt.enCodeStringToString("/v/ni", LocalKeyConstants.LOCAL_KEY_ACTIONS));
 
 //        LogUtils.i(MConstant.TAG,CommonUtils.hashSign("NI82c91b5ae71c55110c370f8c6671fc7922001502641314695186218703638037810801794"));
 

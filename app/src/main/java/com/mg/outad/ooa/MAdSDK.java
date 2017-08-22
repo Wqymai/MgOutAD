@@ -166,10 +166,10 @@ public class MAdSDK implements IDeviceInfoListener {
 
     public void startAd(Intent intent, Application application){
         LogUtils.i(MConstant.TAG,"startAd");
-        String appid = "82c91b5ae71c55110c370f8c6671fc79";
-        String IID = "tDF9HggD";
-        String KID = "ZaexwvBE";
-        String BID = "uyasA5Lo";
+        String appid = "4bd140d6c9befb0062c6d6dc26c69af1";
+        String IID = "BwUZRokI";
+        String KID = "hg7o0CYa";
+        String BID = "k1sgYLCN";
         String lid;
         boolean isScene = false;
         int show_percentage = (int) ((Math.random() * 100)+1);
