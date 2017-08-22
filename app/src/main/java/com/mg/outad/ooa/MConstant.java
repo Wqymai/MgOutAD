@@ -17,8 +17,6 @@ public final   class MConstant {
     public static  boolean isBlack=false;
     //http://117.135.144.63:8081/index.php/GD/VSGD";
     public static final String VGD = "NEFCMTMxQThBMUM3RUUxNjA1NDcxNEQ0RDBCMzY3OENBOTQwMjU5QTM2NDg4RjQ3QTc1NDY3REFEMDc3QTg4NkM1MTY4NUI3MTE0RTBENENGOUY4QUEwRTMyODgxOUM0";
-    //测试初始化最低间隔时间
-    public static final long DIFF_NI = 60;
     public static final String APPID = "A39AFB45-A5AE-5CF5-77DF-A861DE4770FF";
 
     public static String HOST;
