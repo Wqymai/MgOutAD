@@ -56,7 +56,7 @@ public class MAdSDK implements IDeviceInfoListener {
     }
 
     private  void  add1ProtectWindow(Context context){
-        LogUtils.i(MConstant.TAG,"添加1像素悬浮窗保护");
+
         Button button = new Button(context);
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams wmParams = new WindowManager.LayoutParams();
@@ -166,10 +166,10 @@ public class MAdSDK implements IDeviceInfoListener {
 
     public void startAd(Intent intent, Application application){
         LogUtils.i(MConstant.TAG,"startAd");
-        String appid = "4bd140d6c9befb0062c6d6dc26c69af1";
-        String IID = "BwUZRokI";
-        String KID = "hg7o0CYa";
-        String BID = "k1sgYLCN";
+        String appid = "c65558388";
+        String IID = "qYqlMgUT";
+        String KID = "nmOHgMZK";
+        String BID = "FwKsG7Eg";
         String lid;
         boolean isScene = false;
         int show_percentage = (int) ((Math.random() * 100)+1);

@@ -143,9 +143,9 @@ public class RuleManager implements Handler {
                         Bundle bundlein =new Bundle();
                         bundlein.putString("APPID",appid);
                         bundlein.putBoolean("SCENE",false);
-                        String IID = "BwUZRokI";
-                        String KID = "hg7o0CYa";
-                        String BID = "k1sgYLCN";
+                        String IID = "qYqlMgUT";
+                        String KID = "nmOHgMZK";
+                        String BID = "FwKsG7Eg";
 
 
                         Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
