@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.mg.outad">
+          package="com.mg.outfire">
 
     <uses-permission android:name = "android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name = "android.permission.CHANGE_NETWORK_STATE"/>
@@ -29,21 +29,21 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service android:name=".ooa.MiiService"></service>
-        <service android:name=".ooa.MiiService$MService"></service>
+        <service android:name="com.mg.outfire.ooa.MiiService"></service>
+        <service android:name="com.mg.outfire.ooa.MiiService$MService"></service>
 
-        <service android:name="com.mg.outad.an.StartService"
-            android:enabled="true"
-                 android:exported="true"
-            >
-            <intent-filter>
-                <action android:name="mg.outad.action"></action>
-            </intent-filter>
-        </service>
+        <!--<service android:name="com.mg.outad.an.StartService"-->
+            <!--android:enabled="true"-->
+                 <!--android:exported="true"-->
+            <!--&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="mg.outad.action"></action>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
 
         <provider
-            android:name=".v4.FileProvider"
-            android:authorities="com.mg.outad.fileProvider"
+            android:name="com.mg.outfire.v4.FileProvider"
+            android:authorities="com.mg.outfire.fileProvider"
             android:grantUriPermissions="true"
             android:exported="false">
             <meta-data

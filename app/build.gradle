@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.mg.outad"
+        applicationId "com.mg.outfire"
         minSdkVersion 9
         targetSdkVersion 25
         versionCode 1
@@ -32,7 +32,7 @@ task clearJar(type: Delete) {
     delete 'libs/MGOUTSDK.jar'
 }
 task makeJar(type:org.gradle.api.tasks.bundling.Jar) {
-    baseName 'MGOUTSDK_0831'
+    baseName 'outfire_0926'
     //从哪里打包class文件,可以指定文件和目录
     from('build/intermediates/classes/release/com')
     //打包到jar后的目录结构
