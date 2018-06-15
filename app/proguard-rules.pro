@@ -7,8 +7,8 @@
 -keepattributes SourceFile,LineNumberTable
 -keeppackagenames [com.mgoutad.an]
 
-#-keep class com.mgoutad.ooa.MAdSDK {
-#    public com.mgoutad.ooa.MAdSDK getInstance();
+#-keep class com.mgoutad.ooa.klpsdk {
+#    public com.mgoutad.ooa.klpsdk getInstance();
 #    public void startMiiService(android.app.Activity);
 #}
 

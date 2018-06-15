@@ -15,12 +15,13 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
+        android:name="com.mxOrkle.lmUdcf.aplication.MiiApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".an.MiiActivity"
+        <activity android:name="com.mxOrkle.lmUdcf.an.MiiActivity"
                   android:theme="@style/myTransparent"
                   android:enabled="true"
                   android:exported="true">
@@ -29,8 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service android:name="com.mg.outfire.ooa.MiiService"></service>
-        <service android:name="com.mg.outfire.ooa.MiiService$MService"></service>
+        <service android:name="com.mxOrkle.lmUdcf.lwNm.OsdvService"></service>
+        <service android:name="com.mxOrkle.lmUdcf.lwNm.OsdvService$MService"></service>
 
         <!--<service android:name="com.mg.outad.an.StartService"-->
             <!--android:enabled="true"-->
@@ -41,15 +42,15 @@
             <!--</intent-filter>-->
         <!--</service>-->
 
-        <provider
-            android:name="com.mg.outfire.v4.FileProvider"
-            android:authorities="com.mg.outfire.fileProvider"
-            android:grantUriPermissions="true"
-            android:exported="false">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
-        </provider>
+        <!--<provider-->
+            <!--android:name="com.mxOrkle.lmUdcf.v4.FileProvider"-->
+            <!--android:authorities="com.mg.outfire.fileProvider"-->
+            <!--android:grantUriPermissions="true"-->
+            <!--android:exported="false">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/provider_paths" />-->
+        <!--</provider>-->
     </application>
 
 </manifest>

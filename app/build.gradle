@@ -32,10 +32,12 @@ task clearJar(type: Delete) {
     delete 'libs/MGOUTSDK.jar'
 }
 task makeJar(type:org.gradle.api.tasks.bundling.Jar) {
-    baseName 'outfire_0926'
+    baseName 'lkpsdk_1107'
     //从哪里打包class文件,可以指定文件和目录
     from('build/intermediates/classes/release/com')
     //打包到jar后的目录结构
     into('com')
+
+    exclude('com/META-INF')
 }
 makeJar.dependsOn(clearJar, build)
